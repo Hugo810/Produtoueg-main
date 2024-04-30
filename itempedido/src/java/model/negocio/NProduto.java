@@ -21,19 +21,13 @@ public class NProduto {
             pcl.inserir(produto);
         } else {
             // Produto existente, verifica se precisa atualizar
-            EProduto produtoExistente = pcl.consultar(produto.getCodigo());
-            if (produtoExistente != null) {
-                // Atualiza apenas os campos alterados
-                if (!produtoExistente.getNome().equals(produto.getNome())) {
-                    produtoExistente.setNome(produto.getNome());
-                }
-                
+            
                 
                 // Salva as alterações no banco de dados
-                pcl.alterar(produtoExistente);
-            } else {
-                throw new IllegalArgumentException("Produto não encontrado para atualização.");
-            }
+                pcl.alterar(produto);
+            
+                
+            
         }
     }
 

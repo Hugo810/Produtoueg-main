@@ -29,6 +29,9 @@
                         <th>Nome</th>
                         <th>Data Cadastro</th>
                         <th>Status</th>
+                        <th>Nome da Compra</th> <!-- Adicionei este atributo -->
+                        <th>Unidade de Venda</th> <!-- Adicionei este atributo -->
+                        <th>Múltiplo de Venda</th> <!-- Adicionei este atributo -->
                         <th colspan="2">Ações</th>
                     </tr>
                 </thead>
@@ -39,13 +42,16 @@
                             <td><c:out value="${produto.nome}" /></td>
                             <td><c:out value="${produto.datacadastro}" /></td>
                             <td><c:out value="${produto.statusTexto}"/></td>
+                            <td><c:out value="${produto.nomecompra}" /></td> <!-- Adicionei este atributo -->
+                            <td><c:out value="${produto.unidadevenda}" /></td> <!-- Adicionei este atributo -->
+                            <td><c:out value="${produto.multiplovenda}" /></td> <!-- Adicionei este atributo -->
                             <td><a href="CProduto?acao=alterar&codigo=${produto.codigo}" class="btn btn-primary">Alterar</a></td>
                             <td><a href="CProduto?acao=excluir&codigo=${produto.codigo}" class="btn btn-danger" onclick="return confirm('Deseja realmente excluir o produto?')">Excluir</a></td>
                         </tr>
                     </c:forEach>
                 </tbody>
                 <tfoot class="table-primary">
-                    <td align="center" colspan="5">
+                    <td align="center" colspan="8">
                         <a href="CProduto?acao=incluir" class="btn btn-success">Novo produto</a>
                     </td>
                 </tfoot>

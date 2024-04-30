@@ -107,6 +107,7 @@ public class CProduto extends HttpServlet {
 
         String codigo = request.getParameter("codigo");
         String nome = request.getParameter("nome");
+        String nomecompra=request.getParameter("nomecompra");
         String status = request.getParameter("status");
         String unidadeVenda = request.getParameter("unidadevenda");
         Double multiploVenda = Double.parseDouble(request.getParameter("multiplovenda"));
@@ -115,6 +116,7 @@ public class CProduto extends HttpServlet {
         EProduto produto = new EProduto();
         produto.setCodigo(Integer.parseInt(codigo));
         produto.setNome(nome);
+        produto.setNomecompra(nomecompra);
         produto.setDatacadastro(Date.valueOf(dataCadastro));
         produto.setUnidadevenda(unidadeVenda);
         produto.setMultiplovenda(multiploVenda);

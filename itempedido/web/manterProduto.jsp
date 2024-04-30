@@ -79,7 +79,7 @@
                 <td>Status</td>
                 <td>
                     <input type="checkbox" name="status"
-                           <c:if test="${cliente.status == true}">checked="true"</c:if>/>
+                           <c:if test="${produto.status == true}">checked="true"</c:if>/>
                 </td>
             </tr>
             <tr>
